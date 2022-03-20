@@ -1,0 +1,5 @@
+FROM php:7-fpm
+RUN mkdir -p /site/health
+COPY ./Nginx/time-index.php /site/index.php
+COPY ./Nginx/nginx-site.conf /etc/nginx/conf.d/site.conf
+COPY ./php/health/succeed-index.php /site/health/index.php
